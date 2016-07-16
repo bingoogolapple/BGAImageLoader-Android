@@ -37,13 +37,19 @@ public class BGADiskCache implements BGAImageCache {
 
     @Override
     public Bitmap get(String url) {
-        if (mCacheDirPath == null) {
+        if (mCacheDirPath == null && !BGAImageLoaderUtil.isFileScheme(url)) {
             return null;
         }
 
         try {
-            String fileName = BGAImageLoaderUtil.md5(url);
-            File file = new File(mCacheDirPath + fileName);
+            File file;
+            if (BGAImageLoaderUtil.isFileScheme(url)) {
+                BGAImageLoaderUtil.log("加载「file://」文件");
+                file = new File(BGAImageLoaderUtil.cropFileScheme(url));
+            } else {
+                file = new File(mCacheDirPath + BGAImageLoaderUtil.md5(url));
+            }
+
             if (file.exists()) {
                 return BitmapFactory.decodeFile(file.getAbsolutePath());
             }
@@ -61,8 +67,7 @@ public class BGADiskCache implements BGAImageCache {
 
         OutputStream os = null;
         try {
-            String fileName = BGAImageLoaderUtil.md5(url);
-            os = new FileOutputStream(mCacheDirPath + fileName);
+            os = new FileOutputStream(mCacheDirPath + BGAImageLoaderUtil.md5(url));
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, os);
             BGAImageLoaderUtil.log("缓存图片到本地");
         } catch (Exception e) {

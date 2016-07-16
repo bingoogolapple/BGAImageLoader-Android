@@ -70,7 +70,12 @@ public class BGAImageLoader extends BGAAbstractImageLoader {
             return;
         }
 
-        getBitmapFromNet(activity, imageView, path, failResId, width, height, delegate);
+        if (BGAImageLoaderUtil.isFileScheme(path)) {
+            BGAImageLoaderUtil.log("加载「file://」文件失败");
+            imageView.setImageResource(failResId);
+        } else {
+            getBitmapFromNet(activity, imageView, path, failResId, width, height, delegate);
+        }
     }
 
     @Override

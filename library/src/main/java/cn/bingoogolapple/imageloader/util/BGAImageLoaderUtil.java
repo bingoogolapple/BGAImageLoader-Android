@@ -18,6 +18,8 @@ import java.security.NoSuchAlgorithmException;
  * 描述:
  */
 public class BGAImageLoaderUtil {
+    private static final String FILE_SCHEME_PREFIX = "file://";
+
     private BGAImageLoaderUtil() {
     }
 
@@ -55,6 +57,14 @@ public class BGAImageLoaderUtil {
 
     public static boolean isExternalStorageWritable() {
         return Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState());
+    }
+
+    public static boolean isFileScheme(String url) {
+        return !TextUtils.isEmpty(url) && url.startsWith(FILE_SCHEME_PREFIX);
+    }
+
+    public static String cropFileScheme(String url) {
+        return url.substring(FILE_SCHEME_PREFIX.length());
     }
 
     public static void log(String msg) {
