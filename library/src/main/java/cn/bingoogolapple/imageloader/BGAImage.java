@@ -5,6 +5,12 @@ import android.content.Context;
 import android.support.annotation.DrawableRes;
 import android.widget.ImageView;
 
+import cn.bingoogolapple.imageloader.bga.BGAImageLoader;
+import cn.bingoogolapple.imageloader.third.BGAGlideImageLoader;
+import cn.bingoogolapple.imageloader.third.BGAPicassoImageLoader;
+import cn.bingoogolapple.imageloader.third.BGAUILImageLoader;
+import cn.bingoogolapple.imageloader.third.BGAXUtilsImageLoader;
+
 /**
  * 作者:王浩 邮件:bingoogolapple@gmail.com
  * 创建时间:16/6/25 下午5:03

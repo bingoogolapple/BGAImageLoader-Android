@@ -1,4 +1,4 @@
-package cn.bingoogolapple.imageloader;
+package cn.bingoogolapple.imageloader.third;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,6 +12,8 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
+
+import cn.bingoogolapple.imageloader.BGAAbstractImageLoader;
 
 /**
  * 作者:王浩 邮件:bingoogolapple@gmail.com

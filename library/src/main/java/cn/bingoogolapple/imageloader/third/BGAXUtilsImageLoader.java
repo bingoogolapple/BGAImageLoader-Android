@@ -1,4 +1,4 @@
-package cn.bingoogolapple.imageloader;
+package cn.bingoogolapple.imageloader.third;
 
 import android.app.Activity;
 import android.app.Application;
@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import org.xutils.common.Callback;
 import org.xutils.image.ImageOptions;
 import org.xutils.x;
+
+import cn.bingoogolapple.imageloader.BGAAbstractImageLoader;
 
 /**
  * 作者:王浩 邮件:bingoogolapple@gmail.com

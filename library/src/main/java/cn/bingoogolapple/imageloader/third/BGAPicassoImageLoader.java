@@ -1,4 +1,4 @@
-package cn.bingoogolapple.imageloader;
+package cn.bingoogolapple.imageloader.third;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
+
+import cn.bingoogolapple.imageloader.BGAAbstractImageLoader;
 
 /**
  * 作者:王浩 邮件:bingoogolapple@gmail.com

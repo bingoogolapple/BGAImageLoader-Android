@@ -1,4 +1,4 @@
-package cn.bingoogolapple.imageloader;
+package cn.bingoogolapple.imageloader.third;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,6 +14,8 @@ import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageSize;
 import com.nostra13.universalimageloader.core.imageaware.ImageViewAware;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
+
+import cn.bingoogolapple.imageloader.BGAAbstractImageLoader;
 
 /**
  * 作者:王浩 邮件:bingoogolapple@gmail.com
